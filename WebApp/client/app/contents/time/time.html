@@ -1,0 +1,21 @@
+<div class="row" align="center">
+    <h1>Time</h1>
+</div>
+
+<div class="row" align="center" ng-show="countdown !== 0">
+    <h3>{{countdown}}</h3>
+</div>
+<div class="row" ng-show="counter !== 0">
+    <h3>{{counter}}</h3>
+</div>
+
+<div ng-show="showWorldClock" align="center">
+    <div class="row" ng-repeat="time in worldTimes">
+        <div class="col-lg-6 col-sm-6 col-xs-4"  align="center">
+            <h3>{{time.name}}</h3>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-6">
+            <h3>{{time.time}}</h3>
+        </div>
+    </div>
+</div>

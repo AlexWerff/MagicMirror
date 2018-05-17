@@ -1,0 +1,13 @@
+<div class="row" align="center">
+    <h3 ng-show="searchResults.length !== 0">Results for: "{{searchText}}"</h3>
+</div>
+
+<div class="row" align="center" ng-show="searchResults.length === 0">
+    <h1>No Videos</h1>
+    <h3>Say "Search for cat videos"</h3>
+</div>
+<div class="row" ng-show="searchResults.length !== 0" align="center">
+    <div class="col-lg-12 col-sm-12 col-xs-12" style="height:350px">
+        <youtube id="youtube" videoid="{{yt.videoid}}"></youtube>
+    </div>
+</div>

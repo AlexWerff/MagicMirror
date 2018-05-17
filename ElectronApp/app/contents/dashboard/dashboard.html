@@ -1,0 +1,10 @@
+<div class="row" ng-show="person !== ''" align="center">
+    <h1 >Hello {{person}}</h1>
+</div>
+
+<div class="row" ng-show="commands.length >0" align="center">
+    <h1 >Help</h1>
+</div>
+<div class="row" align="center" ng-show="commands.length >0">
+    <h3 ng-repeat="command in commands">{{command}}</h3>
+</div>

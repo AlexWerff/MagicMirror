@@ -1,0 +1,267 @@
+
+@font-face {
+    font-family:"Helvetica Neue Light";
+    src: url("../fonts/HelveticaNeue Thin.ttf") /* TTF file for CSS3 browsers */
+}
+
+
+
+html {
+    font-family: "Helvetica Neue Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica; 
+    font-weight: 150;
+    width:100%;
+    height:100%
+}
+
+body{
+    width:100%;
+    height:100%;
+}
+
+
+
+.mirrorBackground {
+    background-color: black;
+}
+
+@media (min-width: 730px) {
+    h5{
+        color:#FFF;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica;
+        font-weight: 150;
+        text-shadow: 0 2px 2px #000000;
+    }
+    h4{
+        color:#FFF;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica; 
+        font-weight: 150;
+        text-shadow: 0 2px 2px #000000;
+    }
+    h3{
+        color:#FFF;
+        font-family: "Helvetica Neue Light",  "Helvetica Neue", Helvetica;
+        font-weight: 150;
+        text-shadow: 0 2px 2px #000000;
+    }
+
+    h2{
+        color:#FFF;
+        font-family: "Helvetica Neue Light",  "Helvetica Neue", Helvetica;
+        font-weight: 150;
+        text-shadow: 0 2px 2px #000000;
+    }
+
+    h1{
+        color:#FFF;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica;
+        font-weight: 150;
+        font-size: 50px;
+        text-shadow: 0 2px 2px #000000;
+    }
+    .header {
+        top:0px;
+        left:0px;
+        height: 150px;
+        width:100%;
+         z-index: 5;
+    }
+    
+    .contentView {
+        margin-right: 10%;
+        margin-left: 10%;
+        padding: 20px;
+    }
+    
+    .middleImage{
+        width:60px;
+        height: auto;
+    }
+    
+    .smallImage{
+        width:30px;
+        height: auto;  
+    }
+    
+    
+    .map {
+        height:350px;
+        width:100%;
+    }
+    
+    #siri-container{
+        width:200px;
+        height:50px 
+    }
+    
+    youtube{
+        width:50px;
+        height:350px;
+    }
+    
+}
+
+@media (max-width: 730px) {
+    h5{
+        color:#FFF;
+        font-family: "Helvetica Neue Light",  "Helvetica Neue", Helvetica;
+        font-weight: 100;
+        font-size: 2vw;
+        text-shadow: 0 1px 2px #000000;
+    }
+    h4{
+        color:#FFF;
+        font-family: "Helvetica Neue Light",  "Helvetica Neue", Helvetica; 
+        font-weight: 100;
+        font-size: 3vw;
+        text-shadow: 0 1px 2px #000000;
+    }
+    h3{
+        color:#FFF;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica;
+        font-weight: 100;
+        font-size: 4vw;
+        text-shadow: 0 1px 2px #000000;
+    }
+
+    h2{
+        color:#FFF;
+        font-family: "Helvetica Neue Light","Helvetica Neue", Helvetica;
+        font-weight: 100;
+        font-size: 5vw;
+        text-shadow: 0 1px 2px #000000;
+    }
+
+    h1{
+        color:#FFF;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica;
+        font-weight: 100;
+        font-size: 6vw;
+        text-shadow: 0 1px 2px #000000;
+    }
+    
+    .contentView {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    
+    .header {
+        top:0px;
+        left:0px;
+        height: 120px;
+        width:100%;
+        z-index: 5;
+    }
+    
+    .middleImage{
+        width:50px;
+        height: auto;
+    }
+    
+    .smallImage{
+        width:20px;
+        height: auto;  
+    }
+    
+    .map {
+        height:250px;
+        width:100%;
+    }
+    
+    #siri-container{
+        width:80%;
+        height:25px 
+    }
+    
+    
+    youtube{
+        width:1000px;
+        height:350px;
+    }
+
+}
+
+
+
+
+
+
+header .helloMirrorText {
+    color: #FFF;
+    display: inline;
+    margin-top: 25px;
+    margin-bottom: auto;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+
+
+.appointmentList {
+    
+}
+
+.appointmentList li {
+    color: #FFF;
+    margin: 15px;
+}
+
+
+.fade.ng-hide {
+  opacity: 0;
+}
+
+.fade.ng-hide-remove,
+.fade.ng-hide-add {
+  display: block !important;
+}
+
+.fade.ng-hide-remove {
+  transition: all linear 1000ms;
+}
+
+.fade.ng-hide-add {
+  transition: all linear 500ms;
+}
+
+
+.redDot{
+    background-color: red;
+    border-radius: 10px;
+    width:20px;
+    height:20px;
+}
+
+
+.progressbar-background {
+    width:100%;
+    height: 4px;
+    background-color: #444;
+    border-radius: 2px;
+}
+
+.progressbar-progress {
+    height: 4px;
+    background-color: #FFF;
+    border-radius: 2px;
+}
+
+.background-image {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    overflow:hidden;
+    z-index: -2;
+    opacity: 0.7;
+}
+
+i{
+    text-shadow: 0 2px 2px #000000;   
+}

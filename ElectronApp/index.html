@@ -1,0 +1,79 @@
+<!doctype html>
+<!--[if lt IE 8]>         <html class="no-js lt-ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Magic Mirror</title>
+    <meta name="description" content="Magic Mirror Dashboard">
+    <meta name="keywords" content="Magic Mirror Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <script src="node_modules/angular/angular.js"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.4/ui-bootstrap.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"/>
+    <script src="node_modules/angular-animate/angular-animate.js"/>
+    
+
+
+    <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>
+
+    <script async src="plugins/siriwave.js"></script>
+    <script src="plugins/ng-maps.js"></script>
+    <script src="plugins/annyang.js"></script>
+    <script src="app/core/voice/voice.commands.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="fonts/HelveticaNeue-UltraLight.ttf" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <script src="app/app.js"></script>
+    <script src="app/core/header/header.controller.js"></script>
+    <script src="app/core/footer/footer.controller.js"></script>
+    <script src="app/contents/dashboard/dashboard.controller.js"></script>
+    <script src="app/contents/calendar/calendar.controller.js"></script>
+    <script src="app/contents/weather/weather.controller.js"></script>
+    <script src="app/contents/news/news.controller.js"></script>
+    <script src="app/contents/videos/youtube.directive.js"></script>
+    <script src="app/contents/videos/videos.controller.js"></script>
+    <script src="app/contents/pictures/pictures.controller.js"></script>
+    <script src="app/contents/maps/maps.controller.js"></script>
+    <script src="app/core/loading/loadingIndicator.directive.js"></script>
+
+</head>
+
+<body ng-app="magicMirrorApp" class="mirrorBackground" id="fullscreen">
+    <header ng-include="'app/core/header/header.html'" class="header"></header>
+
+    <div class="contentView animated-show-hide" ng-show="showContent" >
+        <div ng-view>
+        </div>
+    </div>
+
+    <footer ng-include="'app/core/footer/footer.html'" class="footer"></footer>
+</body>
+
+
+
+<script>
+    /*var elem = document.getElementById("fullscreen");
+    elem.addEventListener("click", function () {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        }
+    });*/
+</script>

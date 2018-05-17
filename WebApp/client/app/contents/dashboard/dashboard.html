@@ -1,0 +1,63 @@
+<div style="margin-bottom:100px">
+    <div class="row" align="center">
+        <h1>{{weather.city}}</h1>
+        <h4>{{weather.text}}</h4>
+        <!--img class="middleImage" src="{{weather.image}}"></img-->
+        <h1>{{weather.temperature}} °C</h1>
+
+    </div>
+
+    <div class="row" ng-show="weather.forecast.lenght >0">
+        <h3>Forecast</h3>
+    </div>
+    <div class="row" ng-repeat="forecast in weather.forecast">
+        <div class="col-lg-5 col-sm-5 col-xs-5">
+            <h4>{{forecast.day}} </h4>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-xs-4">
+            <img class="smallImage" src="{{forecast.image}}"></img>
+            <h5 style="display:inline"> {{forecast.text}}</h5>
+        </div>
+        <div class="col-lg-3 col-sm-3 col-xs-3" align="right">
+            <h4>{{forecast.temp}} °C</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-sm-12">
+        <h2>{{currentFeed.title}} </h2>
+        <h3>{{currentFeed.content}} </h3>
+    </div>
+</div>
+
+<div style="position:absolute;bottom:50px;left:50px;right:50px">
+    <div class="row" align="center">
+        <div class="col-lg-2 col-sm-2">
+            <i class="fa fa-bus fa-lg" aria-hidden="true" style="color:#FFF"></i>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+            <i class="fa fa-home fa-lg" aria-hidden="true" style="color:#FFF"></i>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+            <i class="fa fa-flag fa-lg" aria-hidden="true" style="color:#FFF"></i>
+        </div>
+        <div class="col-lg-2 col-sm-2">
+           <i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#FFF"></i>
+        </div>
+    </div>
+    <div class="row" ng-repeat="travel in travelTimes" align="center">
+        <div class="col-lg-2 col-sm-2">
+            <h3>{{travel.transit}}</h3>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+            <h3>{{travel.from}}</h3>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+            <h3>{{travel.to}}</h3>
+        </div>
+        <div class="col-lg-2 col-sm-2">
+            <h3>{{travel.time}}</h3>
+        </div>
+    </div>
+</div>

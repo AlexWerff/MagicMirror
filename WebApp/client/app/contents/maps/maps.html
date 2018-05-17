@@ -1,0 +1,35 @@
+<div class="row" align="center">
+    <h3>{{currentLocationName}}</h3>
+</div>
+
+<div class="row" align="center">
+    <div class="col-lg-12 col-sm-12">
+        <ng-map zoom={{zoomLevel}} center={{currentPosition}} class="map" style="mapStyle">
+            <shape name="polyline" path={{route.locationPoints}} geodesic="true" stroke-color="#FF0000" stroke-opacity="1.0" stroke-weight="2" ng-repeat="route in routes">
+            </shape>
+            <marker ng-repeat="marker in markers" position="{{marker.pos}}" title="pos: {{marker.name}}"></marker>
+            <marker position="{{positionMarker}}"></marker>
+        </ng-map>
+    </div>
+</div>
+<div ng-repeat="route in routes">
+    <div class="row" style="margin-bottom:20px">
+        <div class="col-lg-6 col-sm-6 col-xs-6">
+            <h3>Distance: {{route.distance}}</h4>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-6">
+            <h3>Time: {{route.time}}</h4>
+        </div>
+    </div>
+
+    <div class="row" ng-repeat="instruction in currentInstructions">
+        <div class="col-lg-3 col-sm-3 col-xs-3">
+            <h3>{{instruction.startTime.toLocaleTimeString()}}</h3>
+        </div>
+        <div class="col-lg-9 col-sm-9 col-xs-9">
+            <h3> {{instruction.text}}</h3>
+        </div>
+    </div>
+</div>
+
+

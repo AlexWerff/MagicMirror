@@ -1,0 +1,28 @@
+<div class="row" align="center" ng-repeat="playlist in playlists" ng-show="currentPlaylist.tracks.length === 0">
+    <h4>{{playlist.name}} ({{playlist.tracks.length}})</h4>
+</div>
+
+<div class="row" align="center">
+    <div class="col-lg-4 col-sm-4" style="opacity:0.7">
+        <img src="{{currentPlaylist.tracks[currentTrackIndex-1].album.coverImageUri}}" width="100" height="100"></img>
+        <h4>{{currentPlaylist.tracks[currentTrackIndex-1].name}} - {{currentPlaylist.tracks[currentTrackIndex-1].artist}}</h4>
+    </div>
+    <div class="col-lg-4 col-sm-4">
+        <img src="{{currentPlaylist.tracks[currentTrackIndex].album.coverImageUri}}" width="120" height="120" style="margin-top:-10px"></img>
+        <h4>{{currentPlaylist.tracks[currentTrackIndex].name}} - {{currentPlaylist.tracks[currentTrackIndex].artist}}</h4>
+    </div>
+    <div class="col-lg-4 col-sm-4" style="opacity:0.7">
+        <img src="{{currentPlaylist.tracks[currentTrackIndex+1].album.coverImageUri}}" width="100" height="100"></img>
+        <h4>{{currentPlaylist.tracks[currentTrackIndex+1].name}} - {{currentPlaylist.tracks[currentTrackIndex+1].artist}}</h4>
+    </div>
+</div>
+
+<!--div class="row" align="center" style="margin-top:50px">
+    <div class="progressbar-background" align="left">
+        <div class="progressbar-progress" ng-style="progressStyle">
+        </div>
+    </div>
+</div-->
+
+
+

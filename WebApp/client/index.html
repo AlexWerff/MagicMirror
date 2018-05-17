@@ -1,0 +1,87 @@
+<!doctype html>
+<!--[if lt IE 8]>         <html class="no-js lt-ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Magic Mirror</title>
+    <meta name="description" content="Magic Mirror Dashboard">
+    <meta name="keywords" content="Magic Mirror Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="plugins/angularjs.js"></script>
+    <script src="plugins/angular-route.js"></script>
+    <script src="plugins/angular-animate.js"></script>
+    <script src="plugins/angular-ui-bootstrap.js"></script>
+    <script src="plugins/date.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/home.config.js"></script>
+    <script src="plugins/colorTools.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="plugins/weather.min.js"></script>
+    <script src="plugins/angular-spotify.min.js"></script>
+    <script src="plugins/imagescale.min.js"></script>
+    
+
+
+    <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>
+    <!--script src="https://raw.githubusercontent.com/andrewplummer/Sugar/2.0.4/dist/sugar.js"></script-->
+
+
+    <script src="plugins/ng-maps.js"></script>
+    <script src="plugins/annyang.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="fonts/HelveticaNeue-UltraLight.ttf" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+</head>
+
+<body ng-app="magicMirrorApp" class="mirrorBackground" id="fullscreen" ng-controller="AppController">
+    <div class="background-image">
+        <img class="scale" ng-src="{{currentBackgroundImage}}" data-scale="best-fill" data-align="center"></img>
+    </div>
+    <header ng-include="'app/core/header/header.html'" class="header"></header>
+
+    <div class="contentView" ng-show="showContent">
+        <div ng-view>
+        </div>
+    </div>
+
+    <footer ng-include="'app/core/footer/footer.html'" class="footer"></footer>
+</body>
+
+
+<script src="app/app.js"></script>
+<script src="app/core/app.controller.js"></script>
+<script src="app/core/voice/voice.service.js"></script>
+<script src="app/contents/music/music.service.js"></script>
+<script src="app/contents/smarthome/smarthome.service.js"></script>
+<script src="app/contents/maps/maps.service.js"></script>
+<script src="app/core/header/header.controller.js"></script>
+<script src="app/core/footer/footer.controller.js"></script>
+<script src="app/contents/dashboard/dashboard.controller.js"></script>
+<script src="app/contents/calendar/calendar.service.js"></script>
+<script src="app/contents/calendar/calendar.controller.js"></script>
+<script src="app/contents/weather/weather.controller.js"></script>
+<script src="app/contents/news/news.controller.js"></script>
+<script src="app/contents/videos/youtube.directive.js"></script>
+<script src="app/contents/videos/videos.controller.js"></script>
+<script src="app/contents/pictures/pictures.controller.js"></script>
+<script src="app/contents/maps/maps.controller.js"></script>
+<script src="app/contents/time/time.controller.js"></script>
+<script src="app/contents/smarthome/smarthome.controller.js"></script>
+<script src="app/contents/music/music.controller.js"></script>
+<script src="app/core/loading/loadingIndicator.directive.js"></script>

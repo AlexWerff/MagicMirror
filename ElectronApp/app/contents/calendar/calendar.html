@@ -1,0 +1,9 @@
+<div class="row" align="center">
+    <h1>Today</h1>
+</div>
+<ul class="list-unstyled appointmentList" align="center">
+    <li ng-repeat="appointment in appointments">
+        <h3>{{appointment.date.toLocaleTimeString()}}</h3>
+        <h3 style="margin-left:50px">{{appointment.name}}</h3>
+    </li>
+</ul>
